@@ -1,0 +1,31 @@
+{
+    "name": "ddm/security",
+    "type": "library",
+    "description": "Nonce and Signature creation and verification for use in DDM API's",
+    "keywords": [
+        "Deseret Digital",
+        "DDM",
+        "Nonce",
+        "Signature",
+        "Security"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Russell S. Ahlstrom",
+            "email": "rahlstrom@deseretdigital.com",
+            "homepage": "http://russell.ahlstromology.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework1": ">=1.11,<1.13-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "DDM\\Security": "src/"
+        }
+    }
+}
+
