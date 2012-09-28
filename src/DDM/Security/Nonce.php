@@ -3,6 +3,7 @@
 /**
  * Creates and verifies nonces
  */
+
 namespace DDM\Security;
 
 class Nonce
@@ -111,7 +112,7 @@ class Nonce
     /**
      * Validates a nonce
      *
-     * @param string $nonce
+     * @param int $timestamp
      * @param int $skew OPTIONAL
      * @param int $now OPTIONAL
      *
