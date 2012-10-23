@@ -30,6 +30,9 @@ An .editorconfig file is included to help setup your environment if your IDE sup
     applied.
 ````
 
+* Make sure you have added the necessary tests for your changes.
+* Run all the tests to assure nothing else was accidentally broken.
+
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
