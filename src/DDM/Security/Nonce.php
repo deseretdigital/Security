@@ -34,7 +34,7 @@ class Nonce
             } while ($nonceChar < $duplicate);
 
             $nonceChar %= $popsize;
-            $str .= substr(self::NONCE_CHARS, $n, 1);
+            $str .= substr(self::NONCE_CHARS, $nonceChar, 1);
         }
 
         return $str;
