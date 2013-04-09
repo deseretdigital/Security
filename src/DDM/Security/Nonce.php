@@ -30,10 +30,10 @@ class Nonce
         $str = '';
         for ($i = 0; $i < $length; $i++) {
             do {
-                $n = ord(self::getBytes(1));
-            } while ($n < $duplicate);
+                $nonceChar = ord(self::getBytes(1));
+            } while ($nonceChar < $duplicate);
 
-            $n %= $popsize;
+            $nonceChar %= $popsize;
             $str .= substr(self::NONCE_CHARS, $n, 1);
         }
 
