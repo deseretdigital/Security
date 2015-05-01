@@ -16,11 +16,16 @@
             "email": "rahlstrom@deseretdigital.com",
             "homepage": "http://russell.ahlstromology.com",
             "role": "Developer"
-        }
+        },
+	{
+	    "name": "Joel Dare",
+	    "email": "jdare@deseretdigital.com",
+	    "homepage": "http://www.joeldare.com",
+	    "role": "Developer"
+	}
     ],
     "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework1": ">=1.11,<1.13-dev"
+        "php": ">=5.3.3"
     },
     "autoload": {
         "psr-0": {
