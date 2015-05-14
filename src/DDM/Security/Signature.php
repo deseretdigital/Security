@@ -21,7 +21,9 @@ class Signature
      */
     public static function generateSignature($token, $nonce, $secret, $memberId = 0, $hash = 'sha1')
     {
-        return \Zend_Crypt_Hmac::compute($secret, $hash, $token . $memberId . $nonce);
+        $data = $token . $memberId . $nonce;
+        $hmac = hash_hmac($hash, $data, $secret);
+        return $hmac;
     }
 
     /**
