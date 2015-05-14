@@ -1,5 +1,5 @@
 {
-    "name": "ddm/security",
+    "name": "deseretdigital/security",
     "type": "library",
     "description": "Nonce and Signature creation and verification for use in DDM API's",
     "keywords": [
