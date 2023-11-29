@@ -12,7 +12,7 @@ class Nonce
 
     // iWitness App uses an timestamp-\d{16} as their salt nonce instead of the normal six digit salt
     CONST NONCE_REGEX = '/^(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)Z([\w-]{6,})$/';
-    CONST NONCE_DATEFORMAT = '%Y-%m-%dT%H:%M:%SZ';
+    CONST NONCE_DATEFORMAT = 'Y-m-d\TH:i:s\Z';
     CONST NONCE_CHARS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
     /**
@@ -68,7 +68,7 @@ class Nonce
      */
     public static function generateNonce($length = 6)
     {
-        $timeStr = gmstrftime(self::NONCE_DATEFORMAT, time());
+        $timeStr = gmdate(self::NONCE_DATEFORMAT, time());
         return $nonce = $timeStr . self::getRandomString($length);
     }
 
@@ -167,7 +167,7 @@ class Nonce
      */
     public static function getExpiredTimestamp($now = null)
     {
-        return gmstrftime(self::NONCE_DATEFORMAT, self::getExpiredTime(null, $now));
+        return gmdate(self::NONCE_DATEFORMAT, self::getExpiredTime(null, $now));
     }
 }
 
